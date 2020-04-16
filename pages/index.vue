@@ -7,17 +7,38 @@
       <div>
         <b-button variant="primary" class="btn-lg" href="nosotros">Comenzar</b-button>
       </div>
+      
     </div>
   </div>
 </template>
 
 <script>
 import Logo from "~/components/Logo.vue";
+import Vuex from 'vuex';
+
+
 
 export default {
   components: {
     Logo
-  }
+  },
+  head: {
+    title: 'MiCanasta',
+    titleTemplate: '%s - Nuxt.js',
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+
+      // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+      { hid: 'description', name: 'description', content: 'Meta description' }
+    ]
+  },
+  computed: {
+    ...Vuex.mapState(['contador'])
+  },
+  methods: {
+    ...Vuex.mapMutations(['incrementar'])
+  },
 };
 </script>
 
