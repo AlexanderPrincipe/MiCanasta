@@ -1,8 +1,7 @@
 <template>
   <div class="container my-5">
-    <h1>{{titulo}}</h1>
+    <h1>Registrar locales</h1>
     
-
     <div class="container my-10">
       <div>
         <label for="range-1">Ingrese el nombre del local</label>
@@ -14,26 +13,35 @@
         <b-button class="mt-3" variant="success" @click="agregarLocal">Ingresar</b-button>
       </div>
 
+      
       <b-list-group class="my-5">
         <b-list-group-item
           class="d-flex justify-content-between align-items-center"
           v-for="(mercado, index) in mercados"
-          :key="index"
-        >
-          <li @click="mercado.puntaje++">{{mercado.nombre}} - {{mercado.tipo}}</li>
-          <b-badge variant="primary" pill>{{mercado.puntaje}}</b-badge>
-          
+          :key="index">
+          <li class="mr-auto p-2" @click="mercado.puntaje++">{{mercado.nombre}} - {{mercado.tipo}}</li>
+          <div>
+            <b-button variant="primary" class="p-2">Ver más</b-button>
+          </div>
+          <div>
+            <div class="p-2"></div>
+          </div>
+          <b-badge variant="primary" class="p-2" pill>{{mercado.puntaje}}</b-badge>
         </b-list-group-item>
       </b-list-group>
+      <ul class="list-group"> 
+
+      </ul>
     </div>
   </div>
 </template>
 
 <script>
+
+
 export default {
   data() {
     return {
-      titulo: "Registrar Locales",
       mercados: [
         { nombre: "Tottus", tipo: "supermercado", puntaje: 0 },
         { nombre: "Plaza Vea", tipo: "supermercado", puntaje: 0 },
@@ -52,6 +60,6 @@ export default {
       });
       (this.nombreLocal = ""), (this.tipoLocal = "");
     }
-  }
+  },
 };
 </script>

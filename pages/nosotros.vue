@@ -6,13 +6,15 @@
       <b-row>
         <b-col sm="12">
           <div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi distinctio soluta obcaecati dolor rem veritatis, illo officia incidunt quis assumenda nam. Unde repudiandae molestias ut placeat inventore, eveniet temporibus nihil?</p>
+            <p>Somos una organizacion que ha creado una aplicación web para poder brindar informacion de los mercados y supermercados, información muy util para las familias peruanas, como por ejemplo
+              : Supermercados mejor rankeados por los usuarios, horarios de atención, comentarios de los establecimientos, quejas, productos agotados, aglomeración de personas y mucho mas información.
+            </p>
           </div>
         </b-col>
       </b-row>
 
       <b-row class="mt-10">
-        <b-col sm="3">
+        <b-col sm="4">
           <div>
             <b-card
               title="Misión"
@@ -29,7 +31,7 @@
           </div>
         </b-col>
 
-        <b-col sm="3">
+        <b-col sm="4">
           <div>
             <b-card
               title="Visión"
@@ -46,7 +48,7 @@
           </div>
         </b-col>
 
-        <b-col sm="3">
+        <b-col sm="4">
           <div>
             <b-card
               title="Valores"

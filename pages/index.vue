@@ -16,8 +16,6 @@
 import Logo from "~/components/Logo.vue";
 import Vuex from 'vuex';
 
-
-
 export default {
   components: {
     Logo
