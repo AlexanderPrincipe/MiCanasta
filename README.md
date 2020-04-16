@@ -1,6 +1,6 @@
 # MiCanasta
 
-> My marvelous Nuxt.js project
+> Aplicación para el curso de Ingeniería de Software 2
 
 ## Build Setup
 
