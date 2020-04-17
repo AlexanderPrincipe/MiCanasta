@@ -14,17 +14,15 @@ const store = () => new Vuex.Store({
   },
   mutations: {
     aumentar(state, idx) {
-      state.mercados[idx].puntaje ++
+      state.locales[idx].PUNTAJELOCAL ++
     },
     limpiar(state) {
-      state.mercados.forEach(elemento => {
+      state.locales.forEach(elemento => {
         elemento.cantidad = 0
       })
     },
   },
-  actions: {
-    
-  }
+ 
 })
 
 export default store
