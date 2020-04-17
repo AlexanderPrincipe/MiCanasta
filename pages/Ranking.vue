@@ -1,5 +1,7 @@
 <template>
-  <div>
+
+  <div class="container">
+    <h1>Los mejores Mercados y SuperMercados</h1>
     <ul class="list-group">
       <li v-for="(item, idx) of arrayOrdenado" :key="idx" @click="aumentar(idx)"
       class="list-group-item d-flex justify-content-between align-items-center">
@@ -17,7 +19,7 @@
 import {mapState, mapMutations} from 'vuex';
 
 export default {
-  name: "Lista",
+  name: "Ranking",
   computed: {
       ...mapState(['mercados']),
       arrayOrdenado(state){
@@ -25,7 +27,7 @@ export default {
       }
   },
   methods: {
-      ...mapMutations(['aumentar', 'limpiar', 'agregarLocal'])
+      ...mapMutations(['aumentar', 'limpiar'])
   },
 };
 </script>

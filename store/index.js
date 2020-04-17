@@ -7,9 +7,9 @@ Vue.use(Vuex)
 const store = () => new Vuex.Store({
   state: {
     mercados: [
-      { nombre: "Tottus", tipo: "supermercado", puntaje: 0 },
-      { nombre: "Plaza Vea", tipo: "supermercado", puntaje: 0 },
-      { nombre: "Mercado Palao", tipo: "mercado", puntaje: 0 }
+      { nombre: "Tottus", tipo: "supermercado", puntaje: 10 },
+      { nombre: "Plaza Vea", tipo: "supermercado", puntaje: 8 },
+      { nombre: "Mercado Palao", tipo: "mercado", puntaje: 5 }
     ],
   },
   mutations: {

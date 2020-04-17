@@ -38,6 +38,7 @@
 
 <script>
 
+import {mapState, mapMutations} from 'vuex';
 
 export default {
   data() {
@@ -52,6 +53,7 @@ export default {
     };
   },
   methods: {
+     ...mapMutations(['aumentar', 'limpiar']),
     agregarLocal() {
       this.mercados.push({
         nombre: this.nombreLocal,
