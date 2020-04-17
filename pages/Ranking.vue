@@ -1,16 +1,26 @@
 <template>
 
-  <div class="container">
+  <div class="container my-5">
     <h1>Los mejores Mercados y SuperMercados</h1>
-    <ul class="list-group">
-      <li v-for="(local, idx) of arrayOrdenado" :key="idx"
-      class="list-group-item d-flex justify-content-between align-items-center">
-        {{idx + 1}}. {{ local.NOMBRELOCAL }}
-        <span class="badge badge-primary badge-pill">{{local.PUNTAJELOCAL}}</span>
-      </li>
-      
-    </ul>
+    
+    <b-list-group class="my-5">
+        <b-list-group-item
+          class="d-flex justify-content-between align-items-center"
+          v-for="(local, idx) of arrayOrdenado" :key="idx">
+          <li class="mr-auto p-2" @click="local.PUNTAJELOCAL++">{{idx + 1}}. {{ local.NOMBRELOCAL }}</li>
+          
+          <b-badge variant="primary" class="p-2" pill>{{local.PUNTAJELOCAL}}</b-badge>
+        </b-list-group-item>
+      </b-list-group>
+
+
+
+
   </div>
+
+  
+
+
 </template>
 
 <script>
@@ -46,3 +56,9 @@ export default {
   },
 };
 </script>
+
+<style >
+li {
+  list-style: none;
+}
+</style>
