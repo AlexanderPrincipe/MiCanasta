@@ -15,10 +15,10 @@
             <a class="nav-link" href="servicios">Servicios</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="ranking">Ranking</a>
+            <a class="nav-link" href="locales">Locales</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="locales">Locales</a>
+            <a class="nav-link" href="ranking">Ranking</a>
           </li>
           
         </ul>

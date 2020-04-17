@@ -30,6 +30,7 @@
             <div class="p-2"></div>
           </div>
           <b-badge variant="primary" class="p-2" pill>{{local.PUNTAJELOCAL}}</b-badge>
+          
         </b-list-group-item>
       </b-list-group>
 

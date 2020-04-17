@@ -8,9 +8,11 @@
           class="d-flex justify-content-between align-items-center"
           v-for="(local, index) in locales"
           :key="index">
-          <li class="mr-auto p-2">{{local.NOMBRELOCAL}} - {{local.TIPOLOCAL}}</li>
+            <li class="mr-auto p-2">{{local.NOMBRELOCAL}} - {{local.TIPOLOCAL}}</li>
           <div>
-            <b-button variant="primary" class="p-2">Ver más</b-button>
+            <nuxt-link :to="`/locales/${local.IDLOCAL}`">
+              <b-button variant="primary" class="p-2"> Ver más </b-button>
+            </nuxt-link>
           </div>
           <div>
             <div class="p-2"></div>
