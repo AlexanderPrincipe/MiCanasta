@@ -13,14 +13,7 @@
         </b-list-group-item>
       </b-list-group>
 
-
-
-
   </div>
-
-  
-
-
 </template>
 
 <script>
