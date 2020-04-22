@@ -46,7 +46,7 @@ export default {
   },
   async created() {
     try {
-      const res = await axios.get('https://api-laundry.herokuapp.com/clientes/local')
+      const res = await axios.get('https://api-laundry.herokuapp.com/clientes/locales')
       this.locales = res.data
       this.locales = Object.values(this.locales)[0]
       console.log(this.locales)

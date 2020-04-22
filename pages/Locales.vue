@@ -11,7 +11,7 @@
             <li class="mr-auto p-2">{{local.NOMBRELOCAL}} - {{local.TIPOLOCAL}}</li>
           <div>
             <nuxt-link :to="`/locales/${local.IDLOCAL}`">
-              <b-button variant="primary" class="p-2"> Ver más </b-button>
+              <b-button variant="primary" class="p-2"> Ver más</b-button>
             </nuxt-link>
           </div>
           <div>
@@ -47,7 +47,7 @@ export default {
   },
   async created() {
     try {
-      const res = await axios.get('https://api-laundry.herokuapp.com/clientes/local')
+      const res = await axios.get('https://api-laundry.herokuapp.com/clientes/locales')
       this.locales = res.data
       this.locales = Object.values(this.locales)[0]
       //console.log(Object.values(this.clientes)[0]);

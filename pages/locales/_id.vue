@@ -1,43 +1,56 @@
 <template>
-    <div class="container">
-        <div class="card">
-            <div class="card-body">
-                <h1>Local: {{comentarios.nombrelocal}}</h1>
-                <p>Comentario: {{comentarios.COMENTARIO}}</p>
-                <nuxt-link to="/locales" class="btn btn-primary">Atras</nuxt-link>
-            </div>
-        </div>
-                
-     
+  <div class="container">
+    <div class="card">
+      <div class="card-body">
+        <h1>Local: {{comentarios.NOMBRELOCAL}}</h1>
+        <p>Comentario: {{comentarios.COMENTARIO}}</p>
+        <nuxt-link to="/locales" class="btn btn-primary">Atras</nuxt-link>
+      </div>
     </div>
+    
+  </div>
 </template>
 
 
 <script>
-
-import {mapState, mapMutations, mapActions} from 'vuex';
-import axios from 'axios'
+import { mapState, mapMutations, mapActions } from "vuex";
+import axios from "axios";
 
 export default {
   data() {
     return {
+      value: 3
     };
   },
-  async created() {
-  },
-  async asyncData({isDev, route, store, env, params, query, req, res, redirect, error}) {
-      try {
-      const res = await axios.get(`https://api-laundry.herokuapp.com/clientes/comentarios/${params.id}`)
-      const comentarios = res.data
+  async created() {},
+  async asyncData({
+    isDev,
+    route,
+    store,
+    env,
+    params,
+    query,
+    req,
+    res,
+    redirect,
+    error
+  }) {
+    try {
+      const res = await axios.get(
+        `https://api-laundry.herokuapp.com/clientes/comentarios/${params.id}`
+      );
+      const comentarios = res.data;
       //this.comentarios = Object.values(this.comentarios)[0]
-      const resLocal = await axios.get(`https://api-laundry.herokuapp.com/clientes/local/${res.data.IDLOCAL}`)
+      const resLocal = await axios.get(
+        `https://api-laundry.herokuapp.com/clientes/local/${res.data.IDLOCAL}`
+      );
 
-      comentarios.nombrelocal = resLocal.data.NOMBRELOCAL;
+      comentarios.NOMBRELOCAL = resLocal.data.NOMBRELOCAL;
 
-      return {comentarios};
+      return { comentarios };
     } catch (error) {
       console.log(error);
-      return {error: error}
+      return { error: error };
     }
   }
 };
