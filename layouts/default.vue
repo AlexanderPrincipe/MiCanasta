@@ -9,22 +9,30 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="nosotros">Nosotros</a>
+            <nuxt-link to="/signin" class="nav-link">Sign In</nuxt-link>
+          </li>
+
+          <li class="nav-item active">
+            <nuxt-link to="/signup" class="nav-link">Sign Up</nuxt-link>
+          </li>
+
+          <li class="nav-item active">
+            <nuxt-link to="/nosotros" class="nav-link">Nosotros</nuxt-link>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="servicios">Servicios</a>
+            <nuxt-link to="/servicios" class="nav-link">Servicios</nuxt-link>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="locales">Locales</a>
+            <nuxt-link to="/Locales" class="nav-link">Locales</nuxt-link>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="ranking">Ranking</a>
+            <nuxt-link to="/Ranking" class="nav-link">Ranking</nuxt-link>
           </li>
-          
         </ul>
         <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          <a class="nav-lin" href="login">Entrar</a>
+          <a class="nav-link" href="registro">Registrarse</a>
+
         </form>
       </div>
     </nav>
