@@ -11,7 +11,7 @@ var firebaseConfig = {
     appId: "1:632272262751:web:50a8b41322a264e230adea"
   };
 
-  let app = nil;
+  let app = null;
 
   if (!firebase.apps.length) {
       app = firebase.initializeApp(firebaseConfig);

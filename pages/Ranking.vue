@@ -42,7 +42,7 @@ export default {
       const res = await axios.get('https://api-laundry.herokuapp.com/clientes/locales')
       this.locales = res.data
       this.locales = Object.values(this.locales)[0]
-      console.log(this.locales)
+      //console.log(this.locales)
     } catch (error) {
       console.log(error)
     }

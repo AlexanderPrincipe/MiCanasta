@@ -8,13 +8,10 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <nuxt-link to="/signin" class="nav-link">Sign In</nuxt-link>
-          </li>
 
-          <li class="nav-item active">
-            <nuxt-link to="/signup" class="nav-link">Sign Up</nuxt-link>
-          </li>
+         
+
+          
 
           <li class="nav-item active">
             <nuxt-link to="/nosotros" class="nav-link">Nosotros</nuxt-link>
@@ -28,10 +25,19 @@
           <li class="nav-item active">
             <nuxt-link to="/Ranking" class="nav-link">Ranking</nuxt-link>
           </li>
+
         </ul>
+
+
+
         <form class="form-inline my-2 my-lg-0">
-          <a class="nav-lin" href="login">Entrar</a>
-          <a class="nav-link" href="registro">Registrarse</a>
+           
+            <b-button v-if=!user variant="primary" class="btn-lg mx-2" href="signin">Sign In</b-button>
+          
+            <b-button v-if=!user variant="primary" class="btn-lg mx-2" href="signup">Sign Up</b-button>
+                 
+            <b-button v-if=user variant="primary" class="btn-lg mx-2" @click="signout">Sign Out</b-button>
+        
 
         </form>
       </div>
@@ -42,6 +48,37 @@
   </div>
   
 </template>
+
+
+<script>
+import * as firebase from 'firebase/app';
+import 'firebase/auth';
+
+export default {
+    data() {
+        return {
+            user: '',
+            show: true
+        }
+    },
+    mounted() {
+      firebase.auth().onAuthStateChanged(user => {
+        //console.log(user)
+
+        this.user = user;
+      })
+    },
+
+    methods: {
+      signout(){ 
+        firebase.auth().signOut().then(result => {
+          this.user = ''
+          this.$router.push('/')
+        })
+      }
+    }
+}
+</script>
 
 <style>
 
