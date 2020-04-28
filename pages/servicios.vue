@@ -104,6 +104,7 @@ export default {
           TIPOLOCAL: this.form.tipo,
           PUNTAJELOCAL: 0
       });
+      (this.nombreLocal = ""), (this.tipoLocal = "");
     },
     onSubmit(evt) {
         evt.preventDefault()

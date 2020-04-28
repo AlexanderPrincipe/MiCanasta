@@ -16,6 +16,9 @@ const store = () => new Vuex.Store({
         elemento.cantidad = 0
       })
     },
+    obtenernombre(state) {
+      state.nombre = this.nombre
+    }
   },
  
 })

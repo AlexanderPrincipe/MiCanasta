@@ -1,15 +1,14 @@
 <template>
     <div class="container">
-  <b-card title="Card title" sub-title="Card subtitle">
+  <b-card title="Bienvenido a MiCanasta!" sub-title="MiCanasta es una aplicación 100% gratuita">
     <b-card-text>
-      Some quick example text to build on the <em>card title</em> and make up the bulk of the card's
-      content.
+      Puedes ver el Ranking de los mejores Mercado y Supermercados, crear nuevos supermercados y comentar.
     </b-card-text>
 
     <b-card-text>Bienvenido, {{user.email}}.</b-card-text>
 
-    <a href="#" class="card-link">Card link</a>
-    <b-link href="#" class="card-link">Another link</b-link>
+    <a href="servicios" class="card-link">Registrar mercados</a>
+    <b-link href="Ranking" class="card-link">Ver Ranking</b-link>
   </b-card>
 </div>
 </template>
@@ -27,7 +26,7 @@ export default {
     mounted() {
         firebase.auth().onAuthStateChanged(user => {
                 this.user = user;  
-                //console.log(user)
+                console.log(user)
                 if (!this.user)
                 this.$router.push('/')
             })
