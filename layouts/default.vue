@@ -37,24 +37,29 @@
             <b-button v-if=!user variant="primary" class="btn-lg mx-2" href="signup">Sign Up</b-button>
                  
             <b-button v-if=user variant="primary" class="btn-lg mx-2" @click="signout">Sign Out</b-button>
-        
-
+      
         </form>
       </div>
     </nav>
   </header>
   
     <nuxt />
+    <footer></footer>
   </div>
   
 </template>
 
 
 <script>
+
+import Footers from '../components/footer';
 import * as firebase from 'firebase/app';
 import 'firebase/auth';
 
 export default {
+    components: {
+      Footers
+    },
     data() {
         return {
             user: '',
