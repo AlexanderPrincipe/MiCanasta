@@ -58,7 +58,7 @@
           :key="index">
           <li class="mr-auto p-2" @click="local.PUNTAJELOCAL++">{{local.NOMBRELOCAL}} - {{local.DISTRITOLOCAL}} | {{local.TIPOLOCAL}}</li>
           <div>
-            <b-button variant="primary" class="p-2">Ver más</b-button>
+            <b-button variant="primary" class="p-2" src="/perfillocal">Ver más</b-button>
           </div>
           <div>
             <div class="p-2"></div>
